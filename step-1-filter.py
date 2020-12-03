@@ -15,8 +15,10 @@ def filter_irrelevant_by_title(x: str):
     else:
         return None
 
+
 def round_to_int(x):
     return int(x)
+
 
 if __name__ == "__main__":
     # filter works whose title do not contain key words
