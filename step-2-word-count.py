@@ -23,7 +23,9 @@ def clean_up_title(x):
 
 if __name__ == "__main__":
    stop = stopwords.words('english')
-   other_stop_words = ["attack", "attacks", "based", "ddos", "dos", "denial", "flooding", "volumetric", "denial-of-service"]
+   other_stop_words = ["attack", "attacks", "based", "ddos", "dos",
+                       "denial", "flooding", "volumetric", "service",
+                       "detection", "mitigation", "using"]
    stop.extend(other_stop_words)
 
    df = pd.read_csv("step-1-filtered.csv")
@@ -38,5 +40,3 @@ if __name__ == "__main__":
    df = pd.read_csv("step-2-word-count.csv", names=colnames, header=None, skiprows = [0])
    df = df.sort_values(by=["year", "count"], ascending=False)
    df.to_csv('step-2-word-count.csv', index=False)
-
-
