@@ -17,7 +17,7 @@ def collect_data():
     raw = pd.read_csv("step-2-word-count.csv")
     for i in range(1990, 2020):
       temp = list()
-      years.append(i+1)
+      years.append(i)
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(sdn))]['count'].sum())
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(iot))]['count'].sum())
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(ai))]['count'].sum())
