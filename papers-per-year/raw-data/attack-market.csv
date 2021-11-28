@@ -1,21 +1,17 @@
 year,tag,size,type
 2020,2.54Tbps,2.54,attack
-2020,2.3Tbps,2.30,attack
 2018, ,1.70,attack
-2018,1.35Tbps,1.35,attack
 2017, ,0.623,attack
 2016,1.2Tbps,1.20,attack
-2016, ,1.10,attack
 2014,500Gbps,0.5,attack
-2014, ,0.4,attack
 2013,300Gbps,0.3,attack
 2012, ,0.06,attack
 2009,49Gbps,0.05,attack
-2020,$2.6billion,2.62,market
+2020,$2.6B,2.62,market
 2019, ,2.4,market
-2018,$1.1billion,1.1,market
+2018,$1.1B,1.1,market
 2017, ,0.87,market
-2016,$0.8billion,0.82,market
+2016,$0.8B,0.82,market
 2015, ,0.66,market
 2013, ,0.57,market
-2011,$0.28billion,0.28,market
+2011,$0.28B,0.28,market

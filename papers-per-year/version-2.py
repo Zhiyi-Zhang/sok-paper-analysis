@@ -40,7 +40,7 @@ df = pd.read_csv("attacks.csv")
 sns.regplot(x="x", y="y", data=df, ax=axes[2], color='r', order=3, ci=None)
 
 for line in range(0, df.shape[0]):
-     axes[2].text(df.x[line]-3, df.y[line]+0.2, df["tag"][line], horizontalalignment='left', size='small', color='black', weight='semibold')
+     axes[2].text(df.x[line]-0.1, df.y[line]+0.2, df["tag"][line], horizontalalignment='left', size='small', color='black', weight='semibold')
 
 axes[2].get_yaxis().set_visible(False)
 axes[2].set_ylim(0, 2600)
