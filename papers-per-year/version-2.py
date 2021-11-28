@@ -23,7 +23,7 @@ axes[0].set_ylabel('')
 axes[0].set_title("Papers Per Year")
 
 # market size
-df = pd.read_csv("market-size.csv")
+df = pd.read_csv("raw-data/market-size.csv")
 print(df)
 sns.lineplot(x="year", y="size", data=df, ax=axes[1], color='g', markers=True, marker="o")
 

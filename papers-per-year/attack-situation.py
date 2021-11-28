@@ -2,7 +2,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("attacks.csv")
+df = pd.read_csv("raw-data/attacks.csv")
 
 print(df.head())
 

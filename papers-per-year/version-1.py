@@ -18,7 +18,7 @@ ax.set_ylabel('# of DDoS Related Papers / Year')
 
 # paper figure
 ax2 = ax.twinx()
-df = pd.read_csv("attacks.csv")
+df = pd.read_csv("raw-data/attacks.csv")
 sns.regplot(x="x", y="y", data=df, ax=ax2, color='r', order=3, ci=None)
 
 for line in range(0,df.shape[0]):

@@ -20,7 +20,7 @@ sns.set_theme(style="darkgrid")
 
 ax = sns.regplot(x="year", y="# of papers", data=count_df)
 ax.set(ylim=(0, 560))
-ax.set_xlim(1990, 2021)
+ax.set_xlim(1990, 2020)
 ax.set_title('Published DDoS Related Papers')
 ax.set_xlabel('Year')
 ax.set_ylabel('# of DDoS Related Papers')
