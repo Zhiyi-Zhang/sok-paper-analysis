@@ -7,7 +7,7 @@ class MyTemplate(Template):
 
 selected_cols = [0,1,2,3,6,19]
 result = []
-with open('ddos-paper-merged - Aug23,2022.csv','r', encoding='UTF-8') as csvfile:
+with open('ddos-paper-merged - Aug29,2022.csv','r', encoding='UTF-8') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
         result.append([row[x] for x in selected_cols])
