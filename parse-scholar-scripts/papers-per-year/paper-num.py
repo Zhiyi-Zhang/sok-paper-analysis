@@ -2,7 +2,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("step-1-filtered.csv")
+df = pd.read_csv("../step-1-filtered.csv")
 
 print(df.head())
 
@@ -19,8 +19,8 @@ sns.set_theme(style="darkgrid")
 # plt.show()
 
 ax = sns.regplot(x="year", y="# of papers", data=count_df)
-ax.set(ylim=(0, 560))
-ax.set_xlim(1990, 2020)
+# ax.set(ylim=(0, 560))
+ax.set_xlim(1990, 2025)
 ax.set_title('Published DDoS Related Papers')
 ax.set_xlabel('Year')
 ax.set_ylabel('# of DDoS Related Papers')

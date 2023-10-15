@@ -37,7 +37,7 @@ def identify_year(x):
   numbers = re.findall('(\d{4})', str(x))
   for number in numbers:
     number_int = int(number)
-    if number_int < 2021 and number_int > 1989:
+    if number_int < 2024 and number_int > 1989:
       return number
   return current_year
 
@@ -50,13 +50,14 @@ def read_csv_clean(file_name: str) -> pd.DataFrame:
   return df
 
 if __name__ == "__main__":
-    csv_files = list_csv_files("../run1")
+    dir = "../../raw-data/2023-10-15"
+    csv_files = list_csv_files(dir)
     dfs = list()
     current_year = None
     for csv in csv_files:
       current_year = csv[0:4]
       print(current_year)
-      temp_df = read_csv_clean(join("../run1", csv))
+      temp_df = read_csv_clean(join(dir, csv))
       temp_df['year'] = temp_df["publishedData"].apply(identify_year)
       dfs.append(temp_df)
     result = pd.concat(dfs)

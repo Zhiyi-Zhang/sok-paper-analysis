@@ -28,7 +28,7 @@ if __name__ == "__main__":
     df = df.sort_values(by=["cited", "year"], ascending=False)
     df.to_csv('step-1-filtered.csv', index=False)
 
-    df['cited'] = df['cited']/(2022 - df['year'])
+    df['cited'] = df['cited']/(2024 - df['year'])
     df['cited'] = df['cited'].apply(round_to_int)
     df = df.sort_values(by=["cited", "year"], ascending=False)
     df.to_csv('step-1-filtered-per-year-cited.csv', index=False)
