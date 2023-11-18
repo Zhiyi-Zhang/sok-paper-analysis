@@ -9,13 +9,17 @@ iot = ['iot', 'thing', 'things', 'home']
 ai = ['neural', 'learning', 'machine', 'artificial', 'intelligence', 'deep']
 capability = ['capability', 'tva', 'capabilities', 'siff']
 filter = ['filter', 'ingress', 'filtering', 'filters']
+cloud = ['cloud']
+wireless = ['wireless', '802']
+traceback = ['traceback', 'trace']
+web = ['web']
 
 def collect_data():
     years = list()
-    columns = ['SDN', 'IoT', 'Machine Learning', 'Capability', 'Filter']
+    columns = ['SDN', 'IoT', 'Machine Learning', 'Capability', 'Filter', 'Cloud', 'Wireless', 'Traceback', 'Web']
     values = list()
     raw = pd.read_csv("step-2-word-count.csv")
-    for i in range(1990, 2020):
+    for i in range(2000, 2023):
       temp = list()
       years.append(i)
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(sdn))]['count'].sum())
@@ -23,10 +27,15 @@ def collect_data():
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(ai))]['count'].sum())
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(capability))]['count'].sum())
       temp.append(raw[(raw['year']==i) & (raw['word'].isin(filter))]['count'].sum())
+      temp.append(raw[(raw['year']==i) & (raw['word'].isin(cloud))]['count'].sum())
+      temp.append(raw[(raw['year']==i) & (raw['word'].isin(wireless))]['count'].sum())
+      temp.append(raw[(raw['year']==i) & (raw['word'].isin(traceback))]['count'].sum())
+      temp.append(raw[(raw['year']==i) & (raw['word'].isin(web))]['count'].sum())
       values.append(temp)
     global df
     df = pd.DataFrame(values, years, columns=columns)
     print(df.head)
+    df.to_csv('step-3-1-word-count.csv', index=False)
 
 
 if __name__ == "__main__":
@@ -36,7 +45,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots(figsize=(8, 4))
     sns.lineplot(data=df, linewidth=2.5, ax=ax)
     ax.locator_params(integer=True)
-    ax.set_xlim(2000, 2020)
+    ax.set_xlim(2000, 2023)
     ax.set_ylabel('Published Papers')
     ax.set_xlabel('Year')
     plt.tight_layout()

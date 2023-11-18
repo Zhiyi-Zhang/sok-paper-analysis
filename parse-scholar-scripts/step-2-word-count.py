@@ -25,7 +25,10 @@ if __name__ == "__main__":
    stop = stopwords.words('english')
    other_stop_words = ["attack", "attacks", "based", "ddos", "dos",
                        "denial", "flooding", "volumetric", "service",
-                       "detection", "mitigation", "using"]
+                       "detection", "mitigation", "using", "distributed", 
+                       "system", "network", "control", "survey", "server", 
+                       "approach", "technique", "method", "internet", "time", 
+                       "-", "framework", "…", "‐"]
    stop.extend(other_stop_words)
 
    df = pd.read_csv("step-1-filtered.csv")
