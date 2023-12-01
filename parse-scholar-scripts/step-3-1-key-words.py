@@ -54,7 +54,7 @@ if __name__ == "__main__":
     sns.set_theme(style="darkgrid")
     fig, ax = plt.subplots(figsize=(8, 6))
 
-    sns.heatmap(data=df.transpose(), ax=ax)
+    sns.heatmap(data=df.transpose(), ax=ax, cmap="Blues")
     # sns.lineplot(data=df, linewidth=2.5, ax=ax)
     # ax.locator_params(integer=True)
     # ax.set_xlim(2000, 2023)
